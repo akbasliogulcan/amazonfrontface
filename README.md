@@ -4,6 +4,7 @@ This is a simple frontend clone of the Amazon homepage, built using only **HTML*
 It was created for learning and practice purposes, and does not include any backend or JavaScript functionality.
 
 ## 📸 Preview
+live ::::>>> https://sweet-taiyaki-332578.netlify.app/
 
 <img src="assests/images/bookstore.gif" width="800" height="800" />
 
