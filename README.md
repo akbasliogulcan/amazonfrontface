@@ -5,7 +5,7 @@ It was created for learning and practice purposes, and does not include any back
 
 ## 📸 Preview
 
-![Amazon Clone Preview](./preview.png) <!-- Add a screenshot of your project here -->
+<img src="assests/images/bookstore.gif" width="800" height="800" />
 
 ## 🧰 Technologies Used
 
