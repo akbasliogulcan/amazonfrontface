@@ -17,14 +17,15 @@ body {
   font-family: "Poppins", serif;
 }
 
-/* Border  hepsine hover vermektense border clasını oluştuuryoruz. */
+/* Border  hepsine hover vermektense border clasını oluşturuyoruz. */
 .border {
   border: 1px solid transparent;
   height: 100%;
   display: grid;
   place-items: center;
+  /* justify-items: center;
+align-items: center; */
   padding: 5px;
-  border-radius: 10px;
 }
 
 .border:hover {
@@ -37,12 +38,11 @@ header {
   background-color: #0f1111;
   position: sticky;
   width: 100%;
+  height: 60px;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* * * * *  */
-  height: 60px;
   color: white;
 }
 
@@ -52,7 +52,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* ******* */
 }
 
 .nav-logo img {
@@ -70,11 +69,11 @@ header {
   display: flex;
   margin-left: 3px;
 }
-
+/* 
 .add-second {
   font-size: 16px;
   margin-left: 4px;
-}
+} */
 
 .nav-search {
   display: flex;
@@ -88,7 +87,8 @@ header {
   background-color: #f3f3f3;
   text-align: center;
   border-radius: 4px 0 0 4px;
-  width: 80px;
+  width: 90px;
+  font-size: 15px;
 }
 
 .search-input {
@@ -163,14 +163,14 @@ span {
 /* Hero */
 .hero-section {
   background-image: url("./assets/images/hero_image.jpg");
-  height: 300px;
+  height: 260px;
   background-size: cover;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .hero-msg {
-  position: relative;
   background-color: #ffff;
   width: 80%;
   display: flex;
@@ -181,6 +181,7 @@ span {
   margin-bottom: 25px;
   font-size: 14px;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .hero-msg a {
@@ -195,7 +196,7 @@ span {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   background-color: #e2e2e2;
-  padding: 20px;
+  padding: 5px;
 }
 
 .box {
@@ -205,6 +206,7 @@ span {
   margin-top: 15px;
 }
 .box h2 {
+  white-space: nowrap;
 }
 .box-image {
   width: 100%;
@@ -216,8 +218,114 @@ span {
   height: 100%;
 }
 .box a {
+  color: aqua;
+  display: block;
+  margin-top: 20px;
 }
 
+/* Discount */
+
+.discount-section {
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 30px;
+}
+
+.title a {
+  color: aqua;
+}
+
+.title a:hover {
+  text-decoration: underline;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 15px 0;
+}
+.discount-box {
+  height: 330px;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.discount-box .image {
+  height: 250px;
+  width: 100%;
+}
+.discount-box .image img {
+  width: 100%;
+  height: 100%;
+}
+.discount-box .content p {
+  color: crimson;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.discount-box .content p span {
+  background-color: crimson;
+  color: white;
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+.discount-box .bottom-text {
+  color: black !important;
+  margin-top: 5px;
+}
+
+/* Footer */
+.footer-top {
+  background-color: #364759;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.footer-top:hover {
+  background-color: #4d5c6b;
+}
+
+.footer-top a {
+  color: white;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  background-color: #222f3d;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 30px;
+  gap: 20px;
+}
+
+.footer-list {
+  font-size: 20px;
+}
+
+.footer-list li a {
+  color: rgb(200, 200, 200);
+  font-size: 13px;
+  transition: all 0.5s;
+}
+
+.footer-list li a:hover {
+  color: #fabd68;
+}
 /* Responsive Design */
 @media (max-width: 1200px) {
   .nav-adress {
@@ -232,7 +340,11 @@ span {
   .nav-second {
     display: none;
   }
-
+  .hero-msg {
+    position: sticky;
+    font-size: 10px;
+    padding: 5px;
+  }
   .panel {
     justify-content: space-between;
   }
@@ -241,6 +353,9 @@ span {
   }
   .panel-all {
     margin-left: 20px;
+  }
+  .category-section {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -256,7 +371,7 @@ span {
   }
   .hero-msg {
     width: unset;
-    margin: 20px;
+    margin: 20%;
   }
   .hero-msg a {
     display: none;
@@ -264,9 +379,33 @@ span {
 
   .hero-section {
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .category-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title h2 {
+    font-size: 30px;
+    white-space: nowrap;
+  }
+  .title a {
+    display: none;
+  }
+  .footer-bottom {
+    grid-template-columns: 1fr;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .category-section {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
