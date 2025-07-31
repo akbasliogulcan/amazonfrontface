@@ -5,7 +5,6 @@ It was created for learning and practice purposes, and does not include any back
 
 ## 📸 Preview
 live ::::>>> https://sweet-taiyaki-332578.netlify.app/
-
 <img src="assests/bookstore.gif" width="800" height="800" />
 
 ## 🧰 Technologies Used
